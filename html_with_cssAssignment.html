@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<style>
+/* 1.Universal selector */
+* {
+    /* border : 1px solid red; */
+}
+/* tag selector */
+h1{
+    background-color:green;
+}
+/* id selector */
+ #a{
+    color: red;
+    background-color: yellow;
+ }
+ /* class selector . */
+ .b {
+    /* color: blue; */
+    border: 10px solid;
+ }
+ /* Group Selector . */
+
+ h1,
+ h2 {
+    color:blueviolet;
+ }
+ /* descendant selector */
+ div p {
+    color:red;
+    background: yellow;
+ }
+
+ /* child selector */
+ div > p {
+    color: green;
+    background-color: blue;
+ }
+ /* attribute selector */
+ button[type="submit"] {
+    color:red;
+    font-size: 32px;
+ }
+ /* pseudo classes */
+ li:nth-child(2) {
+    color:red;
+    font-size: 24px;
+ }
+ li:hover {
+    color:yellow;
+    background-color: red;
+    font-size: 38px;
+ }
+/* pseudo elements */
+#r1:before {
+    content: "written by css";
+}
+.b::first-letter {
+    font-size: 48px;
+    color:red;
+}
+#q {
+    display:block;
+}
+#q::first-letter {
+    font-size: 48px;
+    color: red;
+}
+#q::first-line {
+    color:yellow;
+    font-size: 12px;
+}
+#q {
+    display: block;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+/* box mode; */
+h1:nth-child(1) {
+    border: 3px solid red;
+    //padding: 30px;//
+    padding: 10px,20px,40px,60px;   /*top,bottom,right,left */
+        /* padding:20px,40px; */
+    margin: : 30px; 
+}
+</style>
+<link rel="stylesheet" href="style.css"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learning HTML and CSS">
+    <meta name="author" content="Deepika T">
+
+</head>
+  <body>
+    <h1>My HTML only WEbsite</h1>
+    <p>Simple site built using only HTML tags -- no CSS</p>
+    <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="index.html">About</a></li>
+  <li><a href="index.html">Features</a></li>
+  <li><a href="index.html">Contact</a></li>
+</ul>
+
+ <h2>Welcome</h2>
+      <p>This page demonstrates layout and content using only HTMl tags.Use headings,lists,tables,and forms to present information without CSS .</p>
+ <h2>About this page</h2>      
+ <p>The page uses semantic tags <span>< header ></header></span>,<span>< nav ></span>,<span>< main ></span>,<span>< article ></span>,<span>< aside ></span>,and <span>< footer ></span></p>
+ <h2>Key Points</h2> 
+    <ol>
+     <li>Readable structure for users and search engines</li>
+     <li>No external styles - browser default styles only</li>
+     <li>Works well for quick prototype or content-focused pages</li>
+ </ol>
+ <h1>Fetures(HTML-only)</h1>
+ <dl>
+  <dt>Semantic layout</dt>
+  <dd>Clear structure using sectioning elements</dd>
+
+  <dt>Accessible navigation</dt>
+  <dd>Keyboard and screen-reader-friendly links and headings</dd>
+
+  <dt>Forms and tables</dt>
+  <dd>Collect input and show tabular data using plain HTML</dd>
+</dl>
+
+ <h2>Sample Data Table</h2>
+ <table border = 2 >
+    <caption>Product List</caption>
+    <head>
+        <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Price(INR)</th>
+        </tr>
+    </head>
+
+    <body>
+        <tr>
+            <td>Notebook</td>
+            <td>Stationary</td>
+            <td>50</td>
+        </tr>
+
+        <tr>
+            <td>pen</td>
+            <td>Stationary</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Backpack</td>
+            <td>Accessories</td>
+            <td>799</td>
+        </tr>
+    </body>
+ </table>
+ <h2> Quick Links</h2>
+  <a href="index.html" target="_blank"><ul><li>See features</li></a>
+ <a href="index.html"><li>Contact us</li></a>
+ <a href="index.html"><li>More about this demo</li></a>
+  </ul>
+ <h2>Contact</h2>
+<fieldset>
+  <legend>Contact Form</legend>
+  <form>
+    <p>
+      Name:<br>
+      <input type="text" name="name">
+    </p>
+    <p>
+      Email:<br>
+      <input type="email" name="email">
+    </p>
+    <p>
+      Message:<br>
+      <textarea name="message" rows="4" cols="40"></textarea>
+    </p>
+    <p>Preferred Contact</p>
+    <p>
+      <input type="radio" name="contact" value="email"> Email<br>
+      <input type="radio" name="contact" value="phone"> Phone<br>
+    <p>
+      <input type="submit" value="Send">
+    </p>
+  </form>
+</fieldset>
+<p>2024 My HTML-Only Website</p>
+</body>
+</html>

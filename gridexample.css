@@ -1,0 +1,150 @@
+  header {
+        grid-area: head;
+        background-color: black;
+        color: white;
+        padding: 10px;
+    }
+
+    nav {
+        grid-area: navbar;
+        background-color: green;
+        color: yellow;
+        border: 1px solid;
+    }
+
+    aside {
+        grid-area: Aside;
+        background-color: blue;
+        color: aqua;
+        border: 1px solid;
+    }
+
+    body {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas:
+            "head head head"
+            "navbar mainContent Aside "
+            "Footer Footer Footer"
+        ;
+    }
+
+    main {
+        grid-area: mainContent;
+        background-color: white;
+        color: red;
+        border: 1px solid;
+    }
+
+    footer {
+        grid-area: Footer;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        height: 10px;
+    }
+
+    .flexContainer {
+        border: 1px solid red;
+        display: flex;
+        height: 30vh;
+        /* justify-content: center;*/
+        /* align-item: content;*/
+        gap: 10 px;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+
+        /*flex-wrap: wrap;
+        /* the other items are come in second row automaticalyy / / default value will be no wrap */
+        /* wrap-reverse is for the items the items come from bottom */
+        /* align-content will reduce the gap between the one row item and another item */
+    }
+
+    /*values of justify content 
+flex-start ,center, space-around
+space-between,space-evenly */
+    .flexItem {
+        background-color: yellow;
+        border: 2px solid red;
+        color: red;
+        font-size: 24px;
+        height: 100px;
+        width: 100px;
+        margin: 20px;
+
+    }
+
+    .flexItem:hover {
+        transform: translateY(10px);
+        transform: translateX(10px);
+    }
+
+    /*Values of flex direction
+    row,row-reverse,colum,colum-reverse*/
+
+
+
+    .flexItem:nth-child(1) {
+        order: 1;
+        align-self: center;
+    }
+
+    .flexItem:nth-child(6) {
+        order: -1;
+        align-self: flex-end;
+    }
+
+    @media (max-width:576px) {
+        body {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "head head head"
+                "navbar mainContent Aside"
+                "Footer Footer Footer";
+        }
+
+        aside {
+            display: none;
+        }
+
+        .flexItem {
+            font-size: 14px;
+            height: 50px;
+            width: 50px;
+        }
+
+        main {
+            background-color: red;
+        }
+    }
+
+    @media (max-width: 577px) and (max-width:768px) {
+        body {
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "head head head"
+                " mainContent Aside "
+                "Footer Footer"
+            ;
+        }
+
+        nav {
+            display: none;
+        }
+    }
+
+    @media(min-width:769px) and (max-width:992px) {
+        body {
+            grid-template-areas:
+                "head head head"
+                "Aside mainContent navbar"
+                "Footer Footer Footer";
+        }
+    }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    flexContainer {
+        border: 1px solid red;
+        display: flex;
+        height: 30vh;
+         justify-content: center;
+         align-item: content;
+        gap: 10 px;
+        /*flex-direction: column-reverse;
+        justify-content:flex-end;
+        align-items:center;*/
+        
+        flex-wrap: wrap;
+        /* the other items are come in second row automaticalyy / /* default value will be no wrap */
+        /* wrap-reverse is for the items the items come from bottom */
+        /* align-content will reduce the gap between the one row item and another item */
+    }
+
+    /*values of justify content 
+flex-start ,center, space-around
+space-between,space-evenly */
+    .flexItem {
+        background-color: yellow;
+        border:2px solid red;
+        color: red;
+        font-size: 24px;
+        width: 80px;
+        height: 60px;
+
+        /*Values of flex direction
+    row,row-reverse,colum,colum-reverse*/
+
+    }
+</style>
+<link rel="stylesheet" href="flex.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="flex.css">
+</head>
+
+<body>
+    <div class="" flexContainer">
+        <div class="flexItem">Flex Item 1</div>
+        <div class="flexItem">Flex Item 2</div>
+        <div class="flexItem">Flex Item 3</div>
+        <div class="flexItem">Flex Item 4</div>
+        <div class="flexItem">Flex Item 5</div>
+        <div class="flexItem">Flex Item 6</div>
+    </div>
+</body>
+
+</html>

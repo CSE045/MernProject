@@ -1,0 +1,77 @@
+const books = [
+  {
+    bookName: "JavaScript Guide",
+    author: "John Doe",
+    pages: 350,
+    price: 499,
+    rating: 4.3,
+    category: "Programming",
+    publishedYear: 2019,
+  },
+  {
+    bookName: "React Mastery",
+    author: "Siddharth Sharma",
+    pages: 280,
+    price: 599,
+    rating: 4.8,
+    category: "Programming",
+    publishedYear: 2023,
+  },
+  {
+    bookName: "History of India",
+    author: "R. Sharma",
+    pages: 420,
+    price: 399,
+    rating: 4.1,
+    category: "History",
+    publishedYear: 2015,
+  },
+  {
+    bookName: "CSS Basics",
+    author: "Meena Gupta",
+    pages: 180,
+    price: 199,
+    rating: 3.9,
+    category: "Design",
+    publishedYear: 2020,
+  },
+  {
+    bookName: "Node.js Deep Dive",
+    author: "Alex Ron",
+    pages: 510,
+    price: 699,
+    rating: 4.7,
+    category: "Programming",
+    publishedYear: 2021,
+  },
+];
+/*let c = books.reduce((sum,el) => {
+    return sum+el.price;
+},0);
+console.log(c);
+
+let b1 = books.filter((id) => {
+    return id.publishedYear > 2020;
+}).map(id => id.bookName)
+console.log(b1); */
+/*let c=books.filter((el)=> el.category === "Design").map((el)=> el.pages).reduce((sum,pages,_,arr) => sum+pages / arr.length,0);
+//use filter for get the design as a category from collection and map for getting the pages from the category design and use reduce for find average of the pages and use four parameters for reduce  and arr.length is used for finding average in the design category only one so arr.length is 1 //
+console.log(c);*/
+
+/*let b1 = books.filter((id) => {
+    //return id.rating < 4.0;
+//}).map(id => id.author)
+console.log(b1);*/
+/*let c = books.reduce((max,book) => {
+    //return book.price > max.price ? book : max;
+//});
+console.log(c);*/
+/*let b1 = books.filter((id) => {
+    //return id.pages > 300 && id.price < 500;
+//}).map(id => id.bookName)
+console.log(b1);*/
+
+let b1 = books.map((el) => { return  el.bookName,el.author;
+ });
+ console.log(b1);
+

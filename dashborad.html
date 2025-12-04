@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    header {
+        text-align: center;
+        grid-area: head;
+        background-color: blue;
+        color: white;
+        padding: 30px ;
+        font-size: 48px; 
+        font-weight: bold;
+    }
+
+    nav {
+        grid-area: navbar;
+        background-color: black;
+        color:white;
+        padding: 30px;
+        height:100vh;
+        border: 1px solid black;
+        width: 250px;
+    
+    }
+
+
+    body {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        /*grid-template-columns: auto 1fr auto;*/
+        grid-template-areas:
+            "head head "
+            "navbar mainContent"
+
+        ;
+    }
+
+    main {
+        background: white;
+        padding: 20px;
+        grid-area: mainContent;
+    }
+
+
+
+
+
+    .flexContainer {
+        border: 1px solid red;
+        display: flex;
+        height: 30vh;
+        /* justify-content: center;*/
+        /* align-item: content;*/
+        gap: 10 px;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+    .flexItem {
+        background-color: yellow;
+        border: 2px solid red;
+        color: red;
+        font-size: 24px;
+        height: 100px;
+        width: 100px;
+        margin: 20px;
+
+    }
+
+   
+
+    .topStats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin: 20px;
+    }
+
+    .statCard {
+        background: white;
+        border: 1px solid wheat;
+        padding: 15px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .cardGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 20px;
+    }
+
+    .dashCard {
+        background: white;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    .dashCard:hover {
+        transform: translateY(5px);
+    }
+
+</style>
+<link rel="stylesheet" href="dashboard.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>Dashboard Layout</header>
+    <nav>
+        <h3>Menu</h3>
+        <p>Dashboard</p>
+        <p>Analytics</p>
+        <p>Reports</p>
+        <p>Settings</p>
+    </nav>
+    <main>
+        <div class="topStats">
+            <div class="statCard">Users: 1200</div>
+            <div class="statCard">Sales: ₹75,000</div>
+            <div class="statCard">Visitors: 5400</div>
+            <div class="statCard">Bounce Rate: 32%</div>
+        </div>
+        <div class="cardGrid">
+            <div class="dashCard">Card 1 Nested Grid</div>
+            <div class="dashCard">Card 2 Responsive</div>
+            <div class="dashCard">Card 3 Large</div>
+            <div class="dashCard">Card 4 Medium</div>
+            <div class="dashCard">Card 5 Hard UI</div>
+            <div class="dashCard">Card 6 CSS Practice</div>
+        </div>
+
+
+
+        </div>
+    </main>
+
+</body>
+
+</html>
